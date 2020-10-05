@@ -1,0 +1,8 @@
+[M,m]odul*
+*.save
+*.ko
+*.o
+*.mod.c
+*.swp
+*.cmd
+*tmp_ver*
