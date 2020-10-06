@@ -14,7 +14,7 @@ cd module
 export LINUX="/path/to/linux/kernel"
 make clean
 ```
-The module is loaded / unloaded with
+To load / unload the module:
 ```console
 insmod module/pseudortc.ko
 rmmod pseudortc
@@ -83,6 +83,8 @@ NUMA node0 CPU(s):   0-3
 
 <details>
   <summary>These results were obtained</summary>
+
+```console
 # ./test.sh
                                                                                                                                                       
 setting hwclock to current time                                                                                                                       
@@ -125,7 +127,7 @@ our clock is 2020-10-06 08:57:01.839920+03:00
 sleeping 10 seconds                                                                                                                                   
 after sleep system clock is 2020-10-06 08:58:08.999296+03:00               
 after sleep our clock is 2020-10-06 08:58:06.519668+03:00                  
-
+```
 
 </details>
 
