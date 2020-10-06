@@ -23,10 +23,8 @@ fast
 rand
 ```
 
-The device has been tested on
-
 <details>
-  <summary>Hardware used for testing</summary>
+  <summary>The driver has been tested on this hardware:</summary>
 
 ```console
 $ uname -a
