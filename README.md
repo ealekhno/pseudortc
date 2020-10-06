@@ -43,7 +43,7 @@ export THERTC=/dev/rtc1
 to point to the device in concern.
 
 <details>
-  <summary>The driver has been tested on this hardware:</summary>
+  <summary>The driver has been tested on this hardware</summary>
 
 ```console
 $ uname -a
@@ -82,7 +82,7 @@ NUMA node0 CPU(s):   0-3
 </details>
 
 <details>
-  <summary>These results were obtained:</summary>
+  <summary>These results were obtained</summary>
 # ./test.sh
                                                                                                                                                       
 setting hwclock to current time                                                                                                                       
