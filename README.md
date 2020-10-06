@@ -16,7 +16,7 @@ make clean
 ```
 The module is loaded / unloaded with
 ```console
-insmod pseudortc.ko
+insmod module/pseudortc.ko
 rmmod pseudortc
 ```
 
