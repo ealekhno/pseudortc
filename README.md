@@ -82,7 +82,7 @@ NUMA node0 CPU(s):   0-3
 </details>
 
 <details>
-  <summary>Those results were obtained:</summary>
+  <summary>These results were obtained:</summary>
 # ./test.sh
                                                                                                                                                       
 setting hwclock to current time                                                                                                                       
@@ -128,3 +128,12 @@ after sleep our clock is 2020-10-06 08:58:06.519668+03:00
 
 
 </details>
+
+# Bugs
+The driver is built without race conditions in mind. On the test system, however, it did not show unexpected behaviour (crashes, hangs, etc).
+
+The driver currently provides only one rtc device with no "easy" option for scalability
+
+The choice to implement control via a separate PROCFS file comes from the need to preserve the kernel tree unmodified, while editing only the module source file. If I am right, the right way to make the default `/proc/driver/rtc` file writeable would be to edit `/drivers/rtc/proc.c`, e.g. the `void rtc_proc_add_device(struct rtc_device *)` function.
+
+Those bugs can be fixed / functionality added if requested.
