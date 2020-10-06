@@ -1,4 +1,6 @@
-Virtual RTC device for linux.
+##Virtual RTC device for linux.
+
+#Basics
 
 To build:
 ```console
@@ -22,6 +24,10 @@ norm
 fast
 rand
 ```
+
+#Testing
+To ease the testing of the device, a simple shell script is provided.
+
 
 <details>
   <summary>The driver has been tested on this hardware:</summary>
