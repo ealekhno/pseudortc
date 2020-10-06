@@ -2,7 +2,7 @@
 
 export THERTC=/dev/rtc1
 
-rmmod pseudortc 2>&1 >> /dev/null
+rmmod pseudortc > /dev/null 2>&1
 insmod ../module/pseudortc.ko || (echo "insmod failed"; exit 1)
 
 echo " "
