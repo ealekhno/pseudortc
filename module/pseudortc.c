@@ -85,10 +85,10 @@ updater(struct timer_list *unused)
 
 	switch (coeff) {
 		case SLOW:
-	        enlarger = 5;
+	        enlarger = 7;
 		break;
 		case FAST:
-	        enlarger = 20;
+	        enlarger = 15;
 		break;
 		case NORM:
 	        enlarger = 10;
