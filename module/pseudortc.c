@@ -71,7 +71,9 @@ p_write(struct file *unused1, const char *ubuf, size_t len, loff_t *unused2)
 		lc = NORM;
 	if (strncmp(kbuf, "rand", 3) == 0)
 		lc = RAND;
-	coeff = lc != 0 ? lc : coeff;
+	if (lc == 0)
+		return -EINVAL;
+	coeff = lc;
 	return len;
 }
 
@@ -111,7 +113,7 @@ updater(struct timer_list *unused)
 static int
 pseudo_rtc_proc(struct device *unused, struct seq_file *seq)
 {
-	seq_printf(seq, "Statistic statistics\n");
+	seq_printf(seq, "Mode\t\t: %s\n", coeff == FAST ? "fast" : coeff == SLOW ? "slow" : coeff == NORM ? "norm" : coeff == RAND ? "rand" : "ERROR");
 	return 0;
 }
 
