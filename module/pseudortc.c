@@ -1,5 +1,3 @@
-/* TODO: concurrency, multiple devices, saner proc?, license? */
-
 #include <linux/init.h>
 #include <linux/kernel.h>
 #include <linux/module.h>
