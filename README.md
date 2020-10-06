@@ -1,6 +1,6 @@
-## Virtual RTC device for linux.
+# Virtual RTC device for linux.
 
-# Basics
+## Basics
 
 To build:
 ```console
@@ -31,7 +31,7 @@ fast
 rand
 ```
 
-# Testing
+## Testing
 To ease the testing of the device, a simple shell script (test.sh) is provided. It can be found in the project's ./tests/ subdirectory.
 This script loads the module being tested, sets its corresponding rtc device from the system clock and then prints out the time it acquires from both
 the tested device and the system's standard rtc. After that it waits for approximately 10 seconds (the actual time depends on many factors) and prints out both times again. The whole process is repeated for all the speed settings provided by the tested module. In the end, the module is uloaded.
@@ -129,7 +129,7 @@ after sleep our clock is 2020-10-06 08:58:06.519668+03:00
 
 </details>
 
-# Bugs
+## Bugs
 The driver is built without race conditions in mind. On the test system, however, it did not show unexpected behaviour (crashes, hangs, etc).
 
 The driver currently provides only one rtc device with no "easy" option for scalability
